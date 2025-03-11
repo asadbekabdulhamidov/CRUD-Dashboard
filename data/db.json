@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "0ab7",
+      "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_15_Pro_Natural_Titanium_PDP_Image_Position-1__en-IN.jpg?v=1694758095",
+      "category": "Smartphone",
+      "description": "Juda kuchli gadjet",
+      "price": "1100",
+      "title": "Iphone 15 PRO MAX"
+    },
+    {
+      "id": "d51a",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ph5WsK4Wlfe9r2E_SR9zcrrD4_hMTqEURg&s",
+      "category": "SmartPhone",
+      "description": "juda  qulay telefon",
+      "price": "1200",
+      "title": "Samsung Galaxy S22 ULTRA"
+    }
+  ],
+  "users": [
+    {
+      "id": "c573",
+      "email": "doston@gmial.com",
+      "password": "9199",
+      "username": "Dostonbek",
+      "address": "Fergana",
+      "phone": "905809199"
+    },
+    {
+      "id": "166e",
+      "email": "aabdulhamidov818@gmail.com",
+      "password": "m38rmF$",
+      "username": "Asadbek",
+      "address": "sdjdnjnd",
+      "phone": "+998 99 693 94 58"
+    },
+    {
+      "id": "3b1e",
+      "email": "InomjonDesgn@gmail.com",
+      "password": "23440535",
+      "username": "Inomjon_Designer",
+      "address": "fergana",
+      "phone": "993992344"
+    }
+  ]
+}
