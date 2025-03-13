@@ -13,7 +13,7 @@ function Sidebar() {
       <div className="mb-10 flex w-full justify-start">
         <Link
           to="/"
-          className="btn btn-secondary px-10 py-6 text-[1.4rem] font-medium leading-[2.1rem]"
+          className="btn btn-primary px-10 py-6 text-[1.4rem] font-medium leading-[2.1rem]"
         >
           PremiumSoft
         </Link>

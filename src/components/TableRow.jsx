@@ -1,27 +1,9 @@
 //hooks
-import { Link, useNavigate } from "react-router-dom";
-import useDelete from "../hooks/useDelete";
+import { Link } from "react-router-dom";
 
-//toast
-import { toast } from "react-toastify";
-
-function TableRow({ user, handleDeleteFromUI }) {
-  const navigate = useNavigate();
-  const { loading, error, remove } = useDelete();
+function TableRow({ user, setIsOpenModal, setSelectedUserId }) {
   const { id, email, address, username, password, phone } = user;
 
-  //handleDelete
-  const handleDeleteUser = async (id) => {
-    try {
-      await remove(`http://localhost:5000/users/${id}`);
-      toast.success(`${username}  O'chirildi `);
-      handleDeleteFromUI(id);
-      // navigate("/users");
-    } catch (error) {
-      console.log(error);
-      toast.error(error);
-    }
-  };
   return (
     <tr>
       <td>
@@ -36,7 +18,7 @@ function TableRow({ user, handleDeleteFromUI }) {
           </div>
           <div>
             <div className="font-bold">{username}</div>
-            <div className="text-sm opacity-50">{address.city}</div>
+            <div className="text-sm opacity-50">{address?.city}</div>
           </div>
         </div>
       </td>
@@ -55,7 +37,10 @@ function TableRow({ user, handleDeleteFromUI }) {
             Edit
           </Link>
           <button
-            onClick={() => handleDeleteUser(id)}
+            onClick={() => {
+              setSelectedUserId(id);
+              setIsOpenModal(true);
+            }}
             className="btn btn-primary"
           >
             Delete

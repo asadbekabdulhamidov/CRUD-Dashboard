@@ -1,28 +1,12 @@
-import { toast } from "react-toastify";
-import useDelete from "../hooks/useDelete";
 import { Link } from "react-router-dom";
 
-function SingleCart({ product, handleDeleteFromUI }) {
+function SingleCart({ product, setIsOpenModal, setSelectedUserId }) {
   // console.log(product);
-
-  const { loading, error, remove } = useDelete();
 
   const { category, description, id, image, price, rating, title } = product;
 
   // console.log(product);
 
-  const handleDelete = async (id) => {
-    // console.log(id);
-
-    try {
-      await remove(`http://localhost:5000/products/${id}`);
-      toast.success(`${id} deleted product`);
-      handleDeleteFromUI(id);
-    } catch (error) {
-      console.log(error.message);
-      toast.error(error.message);
-    }
-  };
   return (
     <div className="card w-80 bg-base-100 shadow-lg">
       <figure>
@@ -43,7 +27,10 @@ function SingleCart({ product, handleDeleteFromUI }) {
               edit
             </Link>
             <button
-              onClick={() => handleDelete(id)}
+              onClick={() => {
+                setIsOpenModal(true);
+                setSelectedUserId(id);
+              }}
               className="btn btn-primary"
             >
               Delete
